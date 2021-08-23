@@ -11,7 +11,7 @@ interface CodeEditorProps {
 }
 
 const CodeEditor : React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
-  console.log("----initialValue---",initialValue)
+  // console.log("----initialValue---",initialValue)
   const [editorText, setEditorText] = useState(initialValue);
   const onChangeText = (value: any, monacoEditor:any) => {
     // console.log("----value---",value)
@@ -39,7 +39,7 @@ const CodeEditor : React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         value={editorText}
         theme="vs-dark" 
         language="javascript" 
-        height="500px" 
+        height="100%" 
         options={{
           wordWrap: 'on',
           minimap : { enabled : false },
