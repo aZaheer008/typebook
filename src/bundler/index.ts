@@ -19,7 +19,9 @@ const bundle =  async (rawcode : string) => {
       define : {
         'process.env.NODE_ENV':'"production"',
         global:'window'
-      }
+      },
+      jsxFactory : '_React.createElement',
+      jsxFragment : '_React.Fragment'
     });
     if (!connectionEstablished){
       if (result.outputFiles[0].text){
