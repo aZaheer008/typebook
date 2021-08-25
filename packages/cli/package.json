@@ -1,0 +1,30 @@
+{
+  "name": "ktsnotes",
+  "version": "1.0.3",
+  "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ktsnotes/local-client": "^1.0.3"
+  },
+  "devDependencies": {
+    "@ktsnotes/local-api": "^1.0.3",
+    "@types/node": "^16.7.1",
+    "commander": "^8.1.0",
+    "esbuild": "0.8.26",
+    "typescript": "^4.3.5"
+  },
+  "gitHead": "0a6968a57b911a0f829af5392c5ee5e9bca4f59d"
+}
